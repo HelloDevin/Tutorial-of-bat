@@ -25,14 +25,13 @@ REM 以上程序跳转标号LABEL处继续执行
 ---
 #### PAUSE：暂停
 ---
-#### IF
-```
+#### IF 条件判断
 IF 条件判断语句，语法格式如下：
-
+```
 IF [NOT] ERRORLEVEL number command
 IF [NOT] string1==string2 command
 IF [NOT] EXIST filename command
-
+```
 解释下：
 [NOT]：将返回结果取反值，就是“如果没有”的意思
 
@@ -52,11 +51,10 @@ EXIST filename:
 IF ERRORLEVEL这个句子必须放在某一个命令的后面，执行命令后由IF ERRORLEVEL 来判断命令的返回值。
 
 例：
-
 （1）
 IF [NOT] ERRORLEVEL number command
 检测命令执行完后的返回值做出判断
-
+```
 echo off
 dir z:
 rem 如果退出代码为1(不成功）就跳至标题1处执行
@@ -73,10 +71,10 @@ Rem 程序执行完毕跳至标题exit处退出
 goto exit
 :exit
 Rem 这里是程序的出口
-
+```
 (2)IF string1==string2 command
 检测当前变量的值做出判断
-
+```
 ECHO OFF
 IF 1==2 goto no
 Echo 变量相等!
@@ -85,12 +83,12 @@ goto exit
 echo 变量不相等
 goto exit
 :exit
-
+```
 看看效果，敲击这个命令1.bat 数字
 
 (3)IF [NOT] EXIST filename command
 发现特定的文件做出判断 
-
+```
 echo off
 IF not EXIST autoexec.bat goto 1
 echo 文件存在成功！
