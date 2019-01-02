@@ -7,7 +7,7 @@
 echo 你好
 @pause
 ```
-#### echo:
+#### ECHO:
 1. 在CMD窗口显示一行内容;
 2. echo off相当于在每条命令前面加一个@符号，这样所有的命令将只会显示结果不显示命令；
 #### REM:注释命令 (例:REM 这个命令就是注释)
@@ -51,8 +51,7 @@ EXIST filename:
 IF ERRORLEVEL这个句子必须放在某一个命令的后面，执行命令后由IF ERRORLEVEL 来判断命令的返回值。
 
 例：
-（1）
-IF [NOT] ERRORLEVEL number command
+1. IF [NOT] ERRORLEVEL number command
 检测命令执行完后的返回值做出判断
 ```
 echo off
@@ -72,7 +71,7 @@ goto exit
 :exit
 Rem 这里是程序的出口
 ```
-(2)IF string1==string2 command
+2. IF string1==string2 command
 检测当前变量的值做出判断
 ```
 ECHO OFF
@@ -86,7 +85,7 @@ goto exit
 ```
 看看效果，敲击这个命令1.bat 数字
 
-(3)IF [NOT] EXIST filename command
+3. IF [NOT] EXIST filename command
 发现特定的文件做出判断 
 ```
 echo off
